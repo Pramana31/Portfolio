@@ -1,100 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pramana Sarkar</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="profile.jpeg" style="width:40px; height:40px; border-radius:50%;" type="image/png">
+<title>Pramana Sarkar</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins';background:#020617;color:white}
+
+nav{
+ display:flex;justify-content:space-between;align-items:center;
+ padding:15px 50px;background:#0f172a;position:fixed;width:100%;top:0
+}
+nav h2{color:#38bdf8}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{color:white;text-decoration:none}
+nav a:hover{color:#38bdf8}
+
+section{padding:100px 60px}
+
+.hero{display:flex;justify-content:space-between;align-items:center;margin-top:50px}
+.hero-text{background:#0f172a;
+ padding:25px;
+ height:350px;
+ text-decoration: center;
+ border-radius:12px;
+ margin-bottom:25px;
+ line-height:1.6}
+.hero-text h1{font-size:40px;margin-bottom:15px}
+.hero-text p{line-height:1.6;
+width:900px;}
+.hero-img{background:#0f172a;
+ padding:25px;
+ height:350px;
+ border-radius:12px;
+ margin-bottom:25px;
+ width:400px;
+ line-height:1.6}
+.hero-img img{background:#0f172a;
+    width: 150px;
+  height: 150px;
+  object-fit: cover;   /* prevents stretching */
+  border-radius: 50%;  /* makes it round */
+  border: 3px solid #38bdf8; /* optional */     
+ box-shadow: 0 0 20px #38bdf8;
+
+}
+
+.btn{margin-top:20px;padding:10px 20px;border:1px solid #38bdf8;color:#38bdf8;text-decoration:none;border-radius:8px}
+.btn:hover{background:#38bdf8;color:black}
+
+.section-title{text-align:center;color:#38bdf8;margin-bottom:40px;font-size:28px}
+
+/* SKILLS */
+.skills-container{
+ display:grid;grid-template-columns:1fr 1fr;gap:40px
+}
+.skill-box{background:#0f172a;padding:20px;border-radius:10px}
+.skill{display:flex;justify-content:space-between;margin:10px 0}
+.bar{height:5px;background:#38bdf8;border-radius:5px}
+
+/* EDUCATION */
+.edu-box{background:#0f172a;padding:20px;border-radius:10px;margin-bottom:20px}
+.edu-box h3{color:#38bdf8}
+
+/* PROJECT */
+.project{
+ background:#0f172a;
+ padding:25px;
+ border-radius:12px;
+ margin-bottom:25px;
+ line-height:1.6
+}
+.project h3{color:#38bdf8;margin-bottom:10px}
+.project ul{padding-left:20px}
+.b1{margin-top:20px;padding:10px 20px;border:1px solid #38bdf8;color:#38bdf8;text-decoration:none;border-radius:8px}
+.b1:hover{
+    background:#38bdf8;
+    color:black}
+
+.contact-me{
+ background:#0f172a;
+ padding:25px;
+ border-radius:12px;
+ color:grey;
+ margin-bottom:25px;
+ line-height:1.6
+}
+.contact-me h3{
+    color:white;
+}
+
+footer{text-align:center;padding:20px}
+
+@media(max-width:768px){
+.hero{flex-direction:column;text-align:center}
+.hero-text{width:100%}
+.skills-container{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
+<nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+        <img src="profile.jpeg" alt="logo" style="width:40px; height:40px; border-radius:50%;">
+        <h2>Pramana Sarkar</h2>
+    </div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-
-<!-- HERO -->
 <section id="home" class="hero">
-    <div class="hero">
-      <img src="profile.jpeg" alt="Pramana Sarkar" class="profile-pic">
+<div class="hero-text">
+<h1>Hi, I'm Pramana Sarkar</h1>
+<p>
+Motivated MCA student with strong foundations in Java, Python, and Full-Stack Development. Experienced
+in building scalable applications and performing data analysis using Python libraries. Skilled in statistical
+modeling, data preprocessing, and exploratory analysis. 
+</p>
+<br>
+<a href="D:\College_Documents\resume\resume.pdf" class="btn" target="_blank">Resume</a>
+</div>
 
-      <h1>I'm Pramana Sarkar</h1>
-      <h2>MCA Student | Full Stack Developer</h2>
-
-      <div class="links">
-          <a href="https://github.com/Pramana31">GitHub</a>
-          <a href="https://www.linkedin.com/in/pramana-sarkar-921808330">LinkedIn</a>
-          <a href="https://leetcode.com/u/pramana31/">LeetCode</a>
-          <a href="https://codolio.com/profile/Pramana31">Codolio</a>
-      </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="glass">
-    <h2>About Me</h2>
-    <p>
-        MCA student skilled in <b>Java, Python, and MERN Stack</b>. 
-        I build <b>scalable applications</b> and solve problems using 
-        <b>data-driven approaches</b>. Passionate about backend systems 
-        and full-stack development.
-    </p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="glass">
-    <h2>Skills</h2>
-
-    <div class="grid">
-        <div class="card">Java</div>
-        <div class="card">Python</div>
-        <div class="card">React</div>
-        <div class="card">Node.js</div>
-        <div class="card">MongoDB</div>
-        <div class="card">MySQL</div>
-        <div class="card">REST APIs</div>
-        <div class="card">Data Analysis</div>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="glass">
-    <h2>Projects</h2>
-
-    <div class="project-card">
-        <h3>Career Counselling App</h3>
-        <a href="https://github.com/TiyasDas-81/CareerCounsellingApp">View</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Fani Rainfall Analysis</h3>
-        <a href="https://github.com/Pramana31/Fani_Rainfall_2019">View</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Electricity Consumption Analysis</h3>
-        <a href="https://github.com/Pramana31/Electricity-Consumption-Pattern">View</a>
-    </div>
-
-    <div class="project-card">
-        <h3>MERN Real Estate Platform</h3>
-        <a href="https://github.com/deathKiller10/mern-realEstate-platform">View</a>
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="glass">
-    <h2>Contact</h2>
-    <a href="mailto:pramanasarkar31@gmail.com" class="btn">Email Me</a>
-</section>
-<center>
-  <footer>
-    <p>© 2026 Pramana Sarkar</p>
-</footer>
+<div class="hero-img">
+<center><img src="profile.jpeg"><br><br>
+    <p>SCC ’25 || VIT ’27</p>
 </center>
+</div>
+</section>
 
+<section id="skills">
+<h2 class="section-title">SKILLS</h2>
 
-<script src="script.js"></script>
+<div class="skills-container">
+<div class="skill-box">
+<div class="skill">Java <span>80%</span></div>
+<div class="bar" style="width:80%"></div>
+<div class="skill">Python <span>75%</span></div>
+<div class="bar" style="width:75%"></div>
+<div class="skill">JavaScript <span>70%</span></div>
+<div class="bar" style="width:70%"></div>
+</div>
+
+<div class="skill-box">
+<div class="skill">React <span>65%</span></div>
+<div class="bar" style="width:65%"></div>
+<div class="skill">Node.js <span>70%</span></div>
+<div class="bar" style="width:70%"></div>
+<div class="skill">MongoDB <span>75%</span></div>
+<div class="bar" style="width:75%"></div>
+</div>
+</div>
+</section>
+
+<section id="education">
+<h2 class="section-title">EDUCATION</h2>
+
+<div class="edu-box">
+<h3>MCA</h3>
+<p>Vellore Institute of Technology (2025 - Present)</p>
+</div>
+
+<div class="edu-box">
+<h3>BSc Computer Science</h3>
+<p>Scottish Church College (2022 - 2025)</p>
+</div>
+
+</section>
+
+<section id="projects">
+<h2 class="section-title">PROJECTS</h2>
+
+<div class="project">
+<h3>Career Counselling App</h3>
+<ul>
+<li>Developed a decision-based application to recommend career paths based on user skills and interests.</li>
+<li>Implemented logical rule engines for personalized recommendations.</li>
+<li>Focused on user-centric design and scalable architecture.</li>
+<li><b>Tech Stack:</b> Java, OOP</li>
+</ul><br>
+<a href="https://github.com/TiyasDas-81/CareerCounsellingApp" target="_blank" class="b1">Click on me to visit the link</a>
+</div>
+
+<div class="project">
+<h3>Fani Rainfall Analysis (Cyclone Fani 2019)</h3>
+<ul>
+<li>Performed exploratory data analysis (EDA) on rainfall data using Python.</li>
+<li>Applied statistical modeling to identify trends and anomalies.</li>
+<li>Created data visualizations using NumPy, Pandas, Matplotlib.</li>
+</ul><br>
+<a href="https://github.com/Pramana31/Fani_Rainfall_2019" target="_blank" class="b1">Click on me to visit the link</a>
+</div>
+
+<div class="project">
+<h3>Electrical Consumption Pattern & Anomaly Detection</h3>
+<ul>
+<li>Analyzed energy consumption data to identify cost-saving opportunities.</li>
+<li>Implemented anomaly detection techniques for irregular usage patterns.</li>
+<li>Used preprocessing and statistical methods to improve accuracy.</li>
+</ul><br>
+<a href="https://github.com/Pramana31/Electricity-Consumption-Pattern" target="_blank" class="b1">Click on me to visit the link</a>
+</div>
+
+</section>
+
+<section id="contact">
+    <div class="contact-me">
+    <center><h3>Contact Me</h3></center>
+    <p>
+        Hello, I'm Pramana Sarkar!<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I'm currently pursuing my Master of Computer Applications (MCA) at Vellore Institute of Technology,Vellore, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;building on my 2025 graduation from Scottish Church College, Kolkata. <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Passionate about technology, innovation, and creating impactful solutions, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’m always eager to explore new challenges and collaborate on exciting projects.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Whether you have a project idea, a collaboration opportunity, or just want to connect, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’d love to hear from you! Let’s work together to turn ideas into reality or discuss the latest in tech.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feel free to reach out via email or connect with me on LinkedIn.
+    </p>
+    <br>
+    <a href="https://github.com/Pramana31" target="_blank" class="btn">Github</a>&nbsp;&nbsp;<a href="mailto:pramanasarkar31@gmail.com" target="_blank" class="btn">Email Me</a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/pramana-sarkar-921808330/" target="_blank" class="btn">LinkedIn</a>&nbsp;&nbsp;<a href="_pramana_31" target="_blank" class="btn">Instagram</a>&nbsp;&nbsp;<a href="https://leetcode.com/u/pramana31/" target="_blank" class="btn">Leetcode</a>
+    </div>
+</section>
+
+<footer>
+<p>© 2026 All Rights Reserved By Pramana Sarkar</p>
+</footer>
 
 </body>
 </html>
